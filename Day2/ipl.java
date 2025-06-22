@@ -23,7 +23,7 @@ public class ipl{
 
         int arr[] = new int[size];
 
-        System.out.println("Enter the elemnts of an array: ");
+        System.out.println("Enter the elements of an array: ");
         for(int i=0; i<size; i++){
             arr[i] = sc.nextInt();
         }

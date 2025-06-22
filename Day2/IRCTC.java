@@ -16,16 +16,35 @@ public class IRCTC{
         System.out.println("Enter the size of an array: ");
         int size = sc.nextInt();
 
-        int[] issue = new int[size];
+        int[] tickets = new int[size];
 
         System.out.println("Enter the elements of an Array: ");
         for(int i = 0; i < size; i++){
-            issue[i] = sc.nextInt();
+            tickets[i] = sc.nextInt();
         }
 
-        Arrays.sort(issue);
+        int start = 0, current = 0, end = size - 1;
 
-        System.out.println("Sorted Array: ");
-        System.out.println(Arrays.toString(issue));
+        while(current<=end){
+            if(tickets[current]==0){
+                //swap b/w current and start
+                tickets[start]+=tickets[current];
+                tickets[current]=tickets[start]-tickets[current];
+                tickets[start]-=tickets[current];
+                start++;
+                current++;
+            }
+            else if(tickets[current]==1){
+                current++;
+            }
+            else{
+                //swap b/w current and end
+                tickets[end]+=tickets[current];
+                tickets[current]=tickets[end]-tickets[current];
+                tickets[end]-=tickets[current];
+                end--;
+            }
+        }
+        System.out.println(Arrays.toString(tickets));
     }
 }
