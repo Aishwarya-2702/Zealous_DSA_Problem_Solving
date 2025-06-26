@@ -58,6 +58,7 @@ public class missing_number{
                 break;
             }
         }
+        sc.close();
     }
 }
 

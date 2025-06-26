@@ -28,9 +28,9 @@ public class IRCTC{
         while(current<=end){
             if(tickets[current]==0){
                 //swap b/w current and start
-                tickets[start]+=tickets[current];
-                tickets[current]=tickets[start]-tickets[current];
-                tickets[start]-=tickets[current];
+                tickets[current]+=tickets[start];
+                tickets[start]=tickets[current]-tickets[start];
+                tickets[current]-=tickets[start];
                 start++;
                 current++;
             }
@@ -46,5 +46,6 @@ public class IRCTC{
             }
         }
         System.out.println(Arrays.toString(tickets));
+        sc.close();
     }
 }

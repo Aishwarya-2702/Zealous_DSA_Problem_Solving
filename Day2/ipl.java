@@ -40,5 +40,6 @@ public class ipl{
 
         Arrays.fill(arr, valid, size, 0);
         System.out.println(Arrays.toString(arr));
+        sc.close();
     }
 }

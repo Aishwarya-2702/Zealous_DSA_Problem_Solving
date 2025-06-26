@@ -15,7 +15,18 @@ import java.util.Scanner;
 
 public class equilibrium{
     public static void main(String[] args){
-        int[] arr = {-7, 1, 5, 2, -4, 3, 0};
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the size of an array: ");
+        int size = sc.nextInt();
+
+        int[] arr = new int[size];
+
+        System.out.println("Enter the elements of an array: ");
+        for(int i=0; i<size; i++){
+            arr[i] = sc.nextInt();
+        }
+
         int totalSum = 0;
         for(int each : arr){
             totalSum+=each;
@@ -32,5 +43,6 @@ public class equilibrium{
                 partSum+=arr[index];
             }
         }
+        sc.close();
     }
 }

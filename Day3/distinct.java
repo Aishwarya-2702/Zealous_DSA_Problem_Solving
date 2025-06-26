@@ -14,9 +14,22 @@
 // digits that can be extracted from the numbers
 // of the array.
 
+import java.util.Scanner;
+
 public class distinct{
     public static void main(String[] args){
-        int[] numbers = {131,11,48};
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the size of an array: ");
+        int size = sc.nextInt();
+
+        int[] numbers = new int[size];
+
+        System.out.println("Enter the elements of an array: ");
+        for(int i=0; i<size; i++){
+            numbers[i] = sc.nextInt();
+        }
+
         boolean[] digits = new boolean[10];
         int remainder = 0;
         for(int each : numbers){
@@ -30,5 +43,6 @@ public class distinct{
             if(digits[index])
             System.out.print(index+" ");
         }
+        sc.close();
     }
 }

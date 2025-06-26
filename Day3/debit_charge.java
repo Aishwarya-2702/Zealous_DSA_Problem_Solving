@@ -12,22 +12,25 @@ public class debit_charge{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
-        int currentBalance = 0, oldBalance = 0, debitCount = 0;
+        int currentBalance = 0;
+        int oldBalance = 0;
+        int debitCount = 0;
 
-        for(int transaction = 1; transaction<=10; transaction++){
-            System.out.println("Tell us current balance:");
+        for(int transaction=1; transaction<=10; transaction++){
+            System.out.println("Enter the current balance: ");
             currentBalance = sc.nextInt();
             if(currentBalance<oldBalance){
                 debitCount++;
             }
             oldBalance = currentBalance;
         }
-        debitCount-=3;
-        if(debitCount>0){
-            currentBalance -= (debitCount*23);
-            System.out.println(debitCount*23+"has been detected");
-        }
 
-        System.out.println("currentBalance "+currentBalance);
+        debitCount -= 3;
+        if(debitCount>0){
+            currentBalance -= (debitCount*20);
+            System.out.println(debitCount*20+" has been deduced");
+        }
+        System.out.println("currentBalance: "+currentBalance);
+        sc.close();
         }
     }

@@ -36,6 +36,7 @@ public class max_payers
 
         //print the highest two tax payers
         System.out.println("Highest tax payers are "+firstMax+ " and "+secondMax);
+        sc.close();
     }
 }
 

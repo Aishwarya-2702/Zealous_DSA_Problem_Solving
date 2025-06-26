@@ -38,6 +38,7 @@ public class least_deposit
 
         //print the least deposit
         System.out.println("Least deposited value is "+least);
+        sc.close();
     }
 }
 
